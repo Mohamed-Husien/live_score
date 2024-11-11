@@ -9,36 +9,49 @@ class FirstView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             right: 32,
             left: 32,
             top: 32,
           ),
           child: Column(
             children: [
-              PlayersCard(),
-              SizedBox(
+              const PlayersCard(),
+              const SizedBox(
                 height: 32,
               ),
-              CustomSemiBoldText(
+              const CustomSemiBoldText(
                 text: 'Dicover all about sport',
                 fontSize: 40,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
-              CustomRegulrText(
+              const CustomRegulrText(
                 text:
                     'Stay ahead of the game—live scores, instant updates, and all the action, right at your fingertips!',
                 fontSize: 16,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
-              SignInOrSignUpBotton(),
+              SignInOrSignUpBotton(
+                onTap: () {
+                  showModalBottomSheet(
+                      shape: const RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.vertical(top: Radius.circular(32)),
+                      ),
+                      backgroundColor: const Color(0xff222232),
+                      context: context,
+                      builder: (context) {
+                        return Container();
+                      });
+                },
+              ),
             ],
           ),
         ),
