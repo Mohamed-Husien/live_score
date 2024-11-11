@@ -3,6 +3,7 @@ import 'package:live_score_app/widgets/sign_in_or_sign_up_part.dart';
 import 'package:live_score_app/widgets/custom_regulr_text.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 import 'package:live_score_app/widgets/players_card.dart';
+import 'package:live_score_app/widgets/signin_show_model_bottom_sheet_body.dart';
 
 class FirstView extends StatelessWidget {
   const FirstView({super.key});
@@ -48,7 +49,7 @@ class FirstView extends StatelessWidget {
                       backgroundColor: const Color(0xff222232),
                       context: context,
                       builder: (context) {
-                        return Container();
+                        return const SignInShowModelBottomSheetBody();
                       });
                 },
               ),
