@@ -10,8 +10,8 @@ class FirstView extends StatelessWidget {
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.only(
-          right: 46,
-          left: 46,
+          right: 32,
+          left: 32,
           top: 64,
         ),
         child: Column(

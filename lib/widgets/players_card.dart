@@ -7,29 +7,62 @@ class PlayersCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      clipBehavior: Clip.none,
       children: [
-        Container(
+        const SizedBox(
           width: double.infinity,
           height: 330,
-          color: const Color(0xff222232),
         ),
         Positioned(
-          top: 60,
-          left: 30,
-          right: 30,
-          bottom: 60,
+          top: 45,
+          left: 5,
+          right: 25,
+          bottom: 5,
           child: Container(
             width: 200,
             decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(32),
+              color: const Color(0xff222232),
+              borderRadius: BorderRadius.circular(62),
             ),
           ),
         ),
         const Positioned(
           top: 16,
           left: 26,
-          child: PiontOnCard(),
+          child: PiontOnCard(
+            width: 20,
+            hight: 20,
+          ),
+        ),
+        const Positioned(
+          bottom: 6,
+          left: 8,
+          child: PiontOnCard(
+            width: 20,
+            hight: 20,
+          ),
+        ),
+        const Positioned(
+          bottom: 85,
+          left: 236,
+          child: PiontOnCard(
+            color: Colors.lightBlue,
+            width: 30,
+            hight: 30,
+          ),
+        ),
+        // Center the image with specific width and height
+        Positioned(
+          top: 0,
+          bottom: .5,
+          // left: ,
+          right: -80,
+          child: Center(
+            child: Image.asset(
+              'asstes/images/image.png',
+              fit: BoxFit.contain,
+            ),
+          ),
         ),
       ],
     );
