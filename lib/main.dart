@@ -13,6 +13,15 @@ class LiveScore extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Source', // Set default font family
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(
+            fontWeight: FontWeight.w400, // Regular
+          ),
+          headlineSmall: TextStyle(
+            fontWeight: FontWeight.w600, // SemiBold
+          ),
+        ),
         primaryColor: const Color(0xFF181829),
         scaffoldBackgroundColor:
             const Color(0xFF181829), // Change background color
