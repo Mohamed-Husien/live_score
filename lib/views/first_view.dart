@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 import 'package:live_score_app/widgets/players_card.dart';
 
 class FirstView extends StatelessWidget {
@@ -20,13 +21,9 @@ class FirstView extends StatelessWidget {
               SizedBox(
                 height: 32,
               ),
-              Text(
-                'Dicover all about sport',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40,
-                  fontWeight: FontWeight.w600,
-                ),
+              CustomSemiBoldText(
+                text: 'Dicover all about sport',
+                fontSize: 40,
               ),
               Text(
                 "Stay ahead of the game—live scores, instant updates, and all the action, right at your fingertips!",
