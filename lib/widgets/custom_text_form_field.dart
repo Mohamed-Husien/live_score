@@ -2,19 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:live_score_app/constant.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  const CustomTextFormField(
-      {super.key,
-      required this.hint,
-      this.maxLines = 1,
-      this.onSaved,
-      this.onChanged});
+  const CustomTextFormField({
+    super.key,
+    required this.hint,
+    this.maxLines = 1,
+    this.onSaved,
+    this.onChanged,
+    this.obscureText = false,
+    this.suffixIcon,
+  });
   final String hint;
   final int maxLines;
   final void Function(String?)? onSaved;
   final Function(String)? onChanged;
+  final bool obscureText;
+  final Widget? suffixIcon;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
       onChanged: onChanged,
       onSaved: onSaved,
       validator: (value) {
@@ -26,11 +32,15 @@ class CustomTextFormField extends StatelessWidget {
       },
       maxLines: maxLines,
       cursorColor: kPrimaryColor,
+      style: const TextStyle(
+        color: Colors.white, // <-- Change text color to white
+      ),
       decoration: InputDecoration(
         border: buildBorder(),
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(kPrimaryColor),
         hintText: hint,
+        suffixIcon: suffixIcon,
         hintStyle: const TextStyle(
           color: kPrimaryColor,
         ),
