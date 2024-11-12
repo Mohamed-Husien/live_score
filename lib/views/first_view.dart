@@ -11,13 +11,14 @@ class FirstView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(
-            right: 32,
-            left: 32,
-            top: 32,
-          ),
+      body: Padding(
+        padding: const EdgeInsets.only(
+          right: 32,
+          left: 32,
+          top: 64,
+          bottom: 16,
+        ),
+        child: SingleChildScrollView(
           child: Column(
             children: [
               const PlayersCard(),
@@ -42,6 +43,7 @@ class FirstView extends StatelessWidget {
               SignInOrSignUpBotton(
                 onTap: () {
                   showModalBottomSheet(
+                      isScrollControlled: true,
                       shape: const RoundedRectangleBorder(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(32)),

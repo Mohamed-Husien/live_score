@@ -4,22 +4,22 @@ import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 
 class CustomSignInButton extends StatelessWidget {
   final VoidCallback onTap;
-
-  const CustomSignInButton({super.key, required this.onTap});
+  final double width;
+  const CustomSignInButton({super.key, required this.onTap, this.width = 180});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(32),
-      splashColor: Colors.white.withOpacity(0.2),
+      borderRadius: BorderRadius.circular(16),
+      splashColor: kPrimaryColor,
       highlightColor: Colors.transparent,
       child: Container(
         height: 64,
-        width: 180,
+        width: width,
         decoration: BoxDecoration(
           color: kPrimaryColor,
-          borderRadius: BorderRadius.circular(32),
+          borderRadius: BorderRadius.circular(16),
         ),
         child: const Center(
           child: CustomSemiBoldText(
