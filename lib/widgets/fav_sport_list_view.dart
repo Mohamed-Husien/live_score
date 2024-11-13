@@ -19,15 +19,29 @@ class _FavoriteSportListViewState extends State<FavoriteSportListView> {
     FavoriteSportModel(
         text: "Baseball", image: "asstes/images/balls/bassball.png"),
   ];
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: sportsList.length,
         itemBuilder: (context, index) {
-          return CustomSelecteFavSport(
-            sportModel: sportsList[index],
-          );
+          return currentIndex == index
+              ? CustomSelecteFavSport(
+                  color: const Color(0xffF4A58A),
+                  onTap: () {
+                    currentIndex = index;
+                    setState(() {});
+                  },
+                  sportModel: sportsList[index],
+                )
+              : CustomSelecteFavSport(
+                  onTap: () {
+                    currentIndex = index;
+                    setState(() {});
+                  },
+                  sportModel: sportsList[index],
+                );
         });
   }
 }
