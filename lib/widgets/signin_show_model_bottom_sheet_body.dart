@@ -20,6 +20,7 @@ class _SignInShowModelBottomSheetBodyState
   bool isSecurePassword = true;
   final GlobalKey<FormState> formKey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  String? password, email;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -38,17 +39,32 @@ class _SignInShowModelBottomSheetBodyState
             const CustomSemiBoldText(text: "Welcome", fontSize: 28),
             const SizedBox(height: 24),
             CustomTextFormField(
-                onChanged: (value) {},
-                validator: (value) => validateEmail(value),
-                hint: 'Email'),
+              onChanged: (value) {
+                email = value;
+              },
+              validator: (value) => validateEmail(value),
+              hint: 'Email',
+              prefixIcon: const Icon(
+                Icons.email,
+                color: Color(0xff65656B),
+              ),
+            ),
             const SizedBox(height: 24),
+            //---------------------------------------------
             CustomTextFormField(
-              onChanged: (value) {},
+              onChanged: (value) {
+                password = value;
+              },
               validator: (value) => validatePassword2(value),
               obscureText: isSecurePassword,
               suffixIcon: toggalePassword(),
               hint: 'Password',
+              prefixIcon: const Icon(
+                Icons.key,
+                color: Color(0xff65656B),
+              ),
             ),
+            //--------------------------------------------
             const SizedBox(height: 24),
             CustomSignInButton(
               width: double.infinity,
@@ -60,6 +76,7 @@ class _SignInShowModelBottomSheetBodyState
                 }
               },
             ),
+            //-------------------------------------------------
             const SizedBox(height: 24),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
