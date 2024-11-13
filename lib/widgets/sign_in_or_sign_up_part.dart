@@ -12,7 +12,7 @@ class SignInOrSignUpBotton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CustomSignInButton(onTap: onTap),
+        CustomButton(onTap: onTap),
         const SizedBox(
           width: 16,
         ),

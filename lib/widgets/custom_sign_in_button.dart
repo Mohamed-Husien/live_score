@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:live_score_app/constant.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 
-class CustomSignInButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final VoidCallback onTap;
   final double width;
-  const CustomSignInButton({super.key, required this.onTap, this.width = 180});
+  final String text;
+  const CustomButton(
+      {super.key,
+      required this.onTap,
+      this.width = 180,
+      this.text = "Sign In"});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +26,9 @@ class CustomSignInButton extends StatelessWidget {
           color: kPrimaryColor,
           borderRadius: BorderRadius.circular(16),
         ),
-        child: const Center(
+        child: Center(
           child: CustomSemiBoldText(
-            text: "Sign In",
+            text: text,
             fontSize: 18,
           ),
         ),
