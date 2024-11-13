@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:live_score_app/models/favorite_sport_model.dart';
+import 'package:live_score_app/widgets/custom_selecte_fav_sport.dart';
 
-class FavoriteSportGridView extends StatefulWidget {
-  const FavoriteSportGridView({super.key});
+class FavoriteSportListView extends StatefulWidget {
+  const FavoriteSportListView({super.key});
 
   @override
-  State<FavoriteSportGridView> createState() => _FavoriteSportGridViewState();
+  State<FavoriteSportListView> createState() => _FavoriteSportListViewState();
 }
 
-class _FavoriteSportGridViewState extends State<FavoriteSportGridView> {
+class _FavoriteSportListViewState extends State<FavoriteSportListView> {
   final List<FavoriteSportModel> sportsList = [
     FavoriteSportModel(text: "Soccer", image: "asstes/images/balls/1.png"),
     FavoriteSportModel(text: "Football", image: "asstes/images/balls/2.png"),
@@ -20,6 +21,13 @@ class _FavoriteSportGridViewState extends State<FavoriteSportGridView> {
   ];
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: sportsList.length,
+        itemBuilder: (context, index) {
+          return CustomSelecteFavSport(
+            sportModel: sportsList[index],
+          );
+        });
   }
 }

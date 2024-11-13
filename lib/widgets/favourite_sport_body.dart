@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_score_app/widgets/custom_regulr_text.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
+import 'package:live_score_app/widgets/fav_sport_list_view.dart';
 
 class FavuoritSportViewBody extends StatefulWidget {
   const FavuoritSportViewBody({
@@ -29,8 +30,9 @@ class _FavuoritSportViewBodyState extends State<FavuoritSportViewBody> {
           fontSize: 16,
         ),
         SizedBox(
-          height: 16,
+          height: 32,
         ),
+        Expanded(child: FavoriteSportListView()),
       ],
     );
   }
