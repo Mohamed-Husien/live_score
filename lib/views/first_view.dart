@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:live_score_app/constant.dart';
 import 'package:live_score_app/views/fav_sport_view.dart';
 import 'package:live_score_app/widgets/sign_in_or_sign_up_part.dart';
 import 'package:live_score_app/widgets/custom_regulr_text.dart';
@@ -51,7 +52,7 @@ class FirstView extends StatelessWidget {
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(32)),
                       ),
-                      backgroundColor: const Color(0xff222232),
+                      backgroundColor: kLightBalckColor,
                       context: context,
                       builder: (context) {
                         return const SignInShowModelBottomSheetBody();
