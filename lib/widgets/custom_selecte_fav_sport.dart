@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:live_score_app/constant.dart';
+import 'package:live_score_app/models/favorite_sport_model.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 
 class CustomSelecteFavSport extends StatelessWidget {
-  const CustomSelecteFavSport({super.key});
-
+  const CustomSelecteFavSport({super.key, required this.sportModel});
+  final FavoriteSportModel sportModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,7 +19,7 @@ class CustomSelecteFavSport extends StatelessWidget {
           ),
           child: Center(
             child: Image.asset(
-              'asstes/images/balls/2.png',
+              sportModel.image,
               width: 80,
               height: 80,
             ),
@@ -27,10 +28,10 @@ class CustomSelecteFavSport extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        const CustomSemiBoldText(
-          text: 'Football',
+        CustomSemiBoldText(
+          text: sportModel.text,
           fontSize: 18,
-        )
+        ),
       ],
     );
   }
