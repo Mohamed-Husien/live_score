@@ -13,7 +13,7 @@ class _FavoriteSportListViewState extends State<FavoriteSportListView> {
   final List<FavoriteSportModel> sportsList = [
     FavoriteSportModel(text: "Soccer", image: "asstes/images/balls/1.png"),
     FavoriteSportModel(text: "Football", image: "asstes/images/balls/2.png"),
-    FavoriteSportModel(text: "Basketball", image: "asstes/images/balls/3.png"),
+    FavoriteSportModel(text: "Basketball", image: "asstes/images/balls/6.png"),
     FavoriteSportModel(text: "Tennis", image: "asstes/images/balls/4.png"),
     FavoriteSportModel(text: "Volleyball", image: "asstes/images/balls/5.png"),
     FavoriteSportModel(

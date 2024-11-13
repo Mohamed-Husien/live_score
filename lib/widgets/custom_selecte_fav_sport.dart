@@ -31,8 +31,8 @@ class CustomSelecteFavSport extends StatelessWidget {
               child: Center(
                 child: Image.asset(
                   sportModel.image,
-                  width: 80,
-                  height: 80,
+                  width: 90,
+                  height: 90,
                   fit: BoxFit.contain,
                 ),
               ),
