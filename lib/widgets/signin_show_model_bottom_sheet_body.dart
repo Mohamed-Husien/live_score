@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_score_app/constant.dart';
+import 'package:live_score_app/helpers/validate_email.dart';
+import 'package:live_score_app/helpers/validate_password.dart';
 import 'package:live_score_app/widgets/custom_regulr_text.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 import 'package:live_score_app/widgets/custom_sign_in_button.dart';
@@ -35,9 +37,14 @@ class _SignInShowModelBottomSheetBodyState
           children: [
             const CustomSemiBoldText(text: "Welcome", fontSize: 28),
             const SizedBox(height: 24),
-            const CustomTextFormField(hint: 'Email'),
+            CustomTextFormField(
+                onChanged: (value) {},
+                validator: (value) => validateEmail(value),
+                hint: 'Email'),
             const SizedBox(height: 24),
             CustomTextFormField(
+              onChanged: (value) {},
+              validator: (value) => validatePassword2(value),
               obscureText: isSecurePassword,
               suffixIcon: toggalePassword(),
               hint: 'Password',
