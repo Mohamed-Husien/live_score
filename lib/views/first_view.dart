@@ -7,7 +7,7 @@ import 'package:live_score_app/widgets/signin_show_model_bottom_sheet_body.dart'
 
 class FirstView extends StatelessWidget {
   const FirstView({super.key});
-
+  static String id = 'FirstView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

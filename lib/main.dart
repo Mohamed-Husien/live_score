@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:live_score_app/views/fav_sport_view.dart';
 import 'package:live_score_app/views/first_view.dart';
 
 void main() {
@@ -26,7 +27,11 @@ class LiveScore extends StatelessWidget {
         scaffoldBackgroundColor:
             const Color(0xFF181829), // Change background color
       ),
-      home: const FirstView(),
+      routes: {
+        FavouriteSportView.id: (context) => const FavouriteSportView(),
+        FirstView.id: (context) => const FirstView(),
+      },
+      initialRoute: FirstView.id,
     );
   }
 }
