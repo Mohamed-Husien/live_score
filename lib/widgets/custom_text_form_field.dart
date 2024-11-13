@@ -10,6 +10,8 @@ class CustomTextFormField extends StatelessWidget {
     this.onChanged,
     this.obscureText = false,
     this.suffixIcon,
+    this.prefixIcon,
+    this.validator,
   });
   final String hint;
   final int maxLines;
@@ -17,6 +19,8 @@ class CustomTextFormField extends StatelessWidget {
   final Function(String)? onChanged;
   final bool obscureText;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
+  final String? Function(String?)? validator;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -41,6 +45,7 @@ class CustomTextFormField extends StatelessWidget {
         focusedBorder: buildBorder(kPrimaryColor),
         hintText: hint,
         suffixIcon: suffixIcon,
+        prefixIcon: prefixIcon,
         hintStyle: const TextStyle(
           color: kPrimaryColor,
         ),

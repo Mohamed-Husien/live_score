@@ -16,7 +16,8 @@ class SignInShowModelBottomSheetBody extends StatefulWidget {
 class _SignInShowModelBottomSheetBodyState
     extends State<SignInShowModelBottomSheetBody> {
   bool isSecurePassword = true;
-
+  final GlobalKey<FormState> formKey = GlobalKey();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,47 +27,56 @@ class _SignInShowModelBottomSheetBodyState
         top: 24,
         bottom: MediaQuery.of(context).viewInsets.bottom,
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const CustomSemiBoldText(text: "Welcome", fontSize: 28),
-          const SizedBox(height: 24),
-          const CustomTextFormField(hint: 'Email'),
-          const SizedBox(height: 24),
-          CustomTextFormField(
-            obscureText: isSecurePassword,
-            suffixIcon: toggalePassword(),
-            hint: 'Password',
-          ),
-          const SizedBox(height: 24),
-          CustomSignInButton(
-            width: double.infinity,
-            onTap: () {},
-          ),
-          const SizedBox(height: 24),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const CustomRegulrText(
-                color: Color(0xffC4C4C4),
-                fontSize: 14,
-                text: "Don't have an account?",
-              ),
-              TextButton(
-                onPressed: () {},
-                child: const CustomRegulrText(
-                  color: kPrimaryColor,
-                  fontSize: 16,
-                  text: "Sign Up",
+      child: Form(
+        key: formKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const CustomSemiBoldText(text: "Welcome", fontSize: 28),
+            const SizedBox(height: 24),
+            const CustomTextFormField(hint: 'Email'),
+            const SizedBox(height: 24),
+            CustomTextFormField(
+              obscureText: isSecurePassword,
+              suffixIcon: toggalePassword(),
+              hint: 'Password',
+            ),
+            const SizedBox(height: 24),
+            CustomSignInButton(
+              width: double.infinity,
+              onTap: () {
+                if (formKey.currentState!.validate()) {
+                  formKey.currentState!.save();
+                } else {
+                  autovalidateMode = AutovalidateMode.always;
+                }
+              },
+            ),
+            const SizedBox(height: 24),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const CustomRegulrText(
+                  color: Color(0xffC4C4C4),
+                  fontSize: 14,
+                  text: "Don't have an account?",
                 ),
-              ),
-              const SizedBox(
-                height: 8,
-              )
-            ],
-          ),
-        ],
+                TextButton(
+                  onPressed: () {},
+                  child: const CustomRegulrText(
+                    color: kPrimaryColor,
+                    fontSize: 16,
+                    text: "Sign Up",
+                  ),
+                ),
+                const SizedBox(
+                  height: 8,
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
