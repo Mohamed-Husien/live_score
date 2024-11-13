@@ -27,13 +27,7 @@ class CustomTextFormField extends StatelessWidget {
       obscureText: obscureText,
       onChanged: onChanged,
       onSaved: onSaved,
-      validator: (value) {
-        if (value?.isEmpty ?? true) {
-          return "Filed is required";
-        } else {
-          return null;
-        }
-      },
+      validator: validator,
       maxLines: maxLines,
       cursorColor: kPrimaryColor,
       style: const TextStyle(
