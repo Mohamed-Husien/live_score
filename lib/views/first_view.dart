@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:live_score_app/views/fav_sport_view.dart';
 import 'package:live_score_app/widgets/sign_in_or_sign_up_part.dart';
 import 'package:live_score_app/widgets/custom_regulr_text.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
@@ -41,7 +42,9 @@ class FirstView extends StatelessWidget {
                 height: 32,
               ),
               SignInOrSignUpBotton(
-                onTap: () {
+                onSingUpPressed: () =>
+                    Navigator.pushNamed(context, FavouriteSportView.id),
+                onSignINTap: () {
                   showModalBottomSheet(
                       isScrollControlled: true,
                       shape: const RoundedRectangleBorder(

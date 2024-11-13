@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:live_score_app/constant.dart';
 import 'package:live_score_app/helpers/validate_email.dart';
 import 'package:live_score_app/helpers/validate_password.dart';
+import 'package:live_score_app/views/fav_sport_view.dart';
 import 'package:live_score_app/widgets/custom_regulr_text.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 import 'package:live_score_app/widgets/custom_sign_in_button.dart';

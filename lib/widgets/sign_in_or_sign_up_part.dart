@@ -5,19 +5,21 @@ import 'package:live_score_app/widgets/custom_sign_in_button.dart';
 class SignInOrSignUpBotton extends StatelessWidget {
   const SignInOrSignUpBotton({
     super.key,
-    required this.onTap,
+    required this.onSignINTap,
+    this.onSingUpPressed,
   });
-  final void Function() onTap;
+  final void Function() onSignINTap;
+  final void Function()? onSingUpPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CustomButton(onTap: onTap),
+        CustomButton(onTap: onSignINTap),
         const SizedBox(
           width: 16,
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: onSingUpPressed,
           child: const CustomRegulrText(text: 'Sign Up', fontSize: 18),
         ),
       ],
