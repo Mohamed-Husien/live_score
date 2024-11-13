@@ -9,6 +9,7 @@ import 'package:live_score_app/widgets/custom_regulr_text.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 import 'package:live_score_app/widgets/custom_sign_in_button.dart';
 import 'package:live_score_app/widgets/custom_text_form_field.dart';
+import 'package:live_score_app/widgets/cutom_text_buttom.dart';
 
 class SignInShowModelBottomSheetBody extends StatefulWidget {
   const SignInShowModelBottomSheetBody({super.key});
@@ -81,23 +82,16 @@ class _SignInShowModelBottomSheetBodyState
             ),
             //-------------------------------------------------
             const SizedBox(height: 24),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const CustomRegulrText(
+                CustomRegulrText(
                   color: Color(0xffC4C4C4),
                   fontSize: 14,
                   text: "Don't have an account?",
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: const CustomRegulrText(
-                    color: kPrimaryColor,
-                    fontSize: 16,
-                    text: "Sign Up",
-                  ),
-                ),
-                const SizedBox(
+                CustomTextButton(text: "Sign Up"),
+                SizedBox(
                   height: 8,
                 )
               ],

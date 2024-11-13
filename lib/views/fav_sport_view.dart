@@ -9,7 +9,11 @@ class FavouriteSportView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(top: 90, right: 28, left: 28, bottom: 30),
+        padding: EdgeInsets.only(
+          top: 120,
+          right: 28,
+          left: 28,
+        ),
         child: FavuoritSportViewBody(),
       ),
     );

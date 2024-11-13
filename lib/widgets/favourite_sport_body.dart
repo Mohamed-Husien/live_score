@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:live_score_app/widgets/custom_regulr_text.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 import 'package:live_score_app/widgets/custom_sign_in_button.dart';
+import 'package:live_score_app/widgets/cutom_text_buttom.dart';
 import 'package:live_score_app/widgets/fav_sport_list_view.dart';
 
 class FavuoritSportViewBody extends StatefulWidget {
@@ -17,7 +18,7 @@ class _FavuoritSportViewBodyState extends State<FavuoritSportViewBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const CustomSemiBoldText(
           text: 'What sport do you interest?',
@@ -40,7 +41,15 @@ class _FavuoritSportViewBodyState extends State<FavuoritSportViewBody> {
           onTap: () {},
         ),
         const SizedBox(
-          height: 80,
+          height: 24,
+        ),
+        const CustomTextButton(
+          text: "Skip",
+          color: Colors.white,
+          fontSize: 18,
+        ),
+        const SizedBox(
+          height: 60,
         )
       ],
     );
