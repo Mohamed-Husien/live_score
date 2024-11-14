@@ -19,7 +19,7 @@ class _FavoriteSportListViewState extends State<FavoriteSportListView> {
     FavoriteSportModel(
         text: "Baseball", image: "asstes/images/balls/bassball.png"),
   ];
-  int currentIndex = 0;
+  int? currentIndex;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(

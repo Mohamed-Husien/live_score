@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:live_score_app/views/home_view.dart';
 import 'package:live_score_app/widgets/custom_regulr_text.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 import 'package:live_score_app/widgets/custom_sign_in_button.dart';
@@ -38,7 +39,9 @@ class _FavuoritSportViewBodyState extends State<FavuoritSportViewBody> {
         CustomButton(
           text: 'Continue',
           width: double.infinity,
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, HomeView.id);
+          },
         ),
         const SizedBox(
           height: 24,
