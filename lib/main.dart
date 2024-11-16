@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_score_app/views/fav_sport_view.dart';
 import 'package:live_score_app/views/first_view.dart';
-import 'package:live_score_app/views/home_view.dart';
+import 'package:live_score_app/views/views_on_navigation_bar/home_view.dart';
 
 void main() {
   runApp(const LiveScore());
