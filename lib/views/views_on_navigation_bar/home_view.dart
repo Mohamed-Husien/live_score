@@ -9,16 +9,28 @@ class HomeView extends StatelessWidget {
     return const SafeArea(
       child: Padding(
         padding: EdgeInsets.all(16),
-        child: Column(
-          children: [
-            CustomAppbar(
-              title: 'LiveScore',
-              icon: Icons.search,
-              icon2: Icons.notifications_on_outlined,
-            ),
-          ],
-        ),
+        child: HomeViewBody(),
       ),
+    );
+  }
+}
+
+class HomeViewBody extends StatelessWidget {
+  const HomeViewBody({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        CustomAppbar(
+          title: 'LiveScore',
+          icon: Icons.search,
+          icon2: Icons.notifications_on_outlined,
+          onPressed: () {},
+        ),
+      ],
     );
   }
 }
