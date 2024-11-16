@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:live_score_app/widgets/home_view_widgets/custom_navigation_bottom_bar.dart';
+import 'package:live_score_app/widgets/home_view_widgets/custom_navigation_bar_2.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -11,13 +10,9 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  int selectedIndex = 0;
-
+  @override
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        bottomNavigationBar: CustomNavigationBottomBar(
-      selectedIndex: selectedIndex,
-    ));
+    return const Scaffold(bottomNavigationBar: CustomNavigationBar2());
   }
 }

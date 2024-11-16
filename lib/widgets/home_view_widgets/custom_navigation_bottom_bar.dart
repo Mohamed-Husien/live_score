@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:live_score_app/constant.dart';
+import 'package:live_score_app/views/fav_sport_view.dart';
 
 class CustomNavigationBottomBar extends StatefulWidget {
-  CustomNavigationBottomBar({super.key, required this.selectedIndex});
-  int selectedIndex;
+  const CustomNavigationBottomBar({
+    super.key,
+  });
+
   @override
   State<CustomNavigationBottomBar> createState() =>
       _CustomNavigationBottomBarState();
 }
 
 class _CustomNavigationBottomBarState extends State<CustomNavigationBottomBar> {
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,9 +24,13 @@ class _CustomNavigationBottomBarState extends State<CustomNavigationBottomBar> {
         child: GNav(
           color: Colors.grey,
           iconSize: 32,
+          selectedIndex: selectedIndex,
           onTabChange: (index) {
+            if (index == 1) {
+              Navigator.pushNamed(context, FavouriteSportView.id);
+            }
             setState(() {
-              widget.selectedIndex = index;
+              selectedIndex = index;
             });
           },
           gap: 8,
