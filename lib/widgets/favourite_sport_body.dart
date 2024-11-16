@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:live_score_app/views/views_on_navigation_bar/home_view.dart';
+import 'package:live_score_app/views/views_on_navigation_bar/parent_view.dart';
 import 'package:live_score_app/widgets/custom_regulr_text.dart';
 import 'package:live_score_app/widgets/custom_semi_bold_text.dart';
 import 'package:live_score_app/widgets/custom_sign_in_button.dart';
@@ -40,7 +40,7 @@ class _FavuoritSportViewBodyState extends State<FavuoritSportViewBody> {
           text: 'Continue',
           width: double.infinity,
           onTap: () {
-            Navigator.pushNamed(context, HomeView.id);
+            Navigator.pushNamed(context, ParentView.id);
           },
         ),
         const SizedBox(

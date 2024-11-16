@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_score_app/views/fav_sport_view.dart';
 import 'package:live_score_app/views/first_view.dart';
-import 'package:live_score_app/views/views_on_navigation_bar/home_view.dart';
+import 'package:live_score_app/views/views_on_navigation_bar/parent_view.dart';
 
 void main() {
   runApp(const LiveScore());
@@ -31,7 +31,7 @@ class LiveScore extends StatelessWidget {
       routes: {
         FavouriteSportView.id: (context) => const FavouriteSportView(),
         FirstView.id: (context) => const FirstView(),
-        HomeView.id: (context) => const HomeView(),
+        ParentView.id: (context) => const ParentView(),
       },
       initialRoute: FirstView.id,
     );
