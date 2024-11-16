@@ -5,15 +5,17 @@ class CustomSemiBoldText extends StatelessWidget {
     super.key,
     required this.text,
     required this.fontSize,
+    this.color = Colors.white,
   });
   final String text;
   final double fontSize;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: TextStyle(
-        color: Colors.white,
+        color: color,
         fontSize: fontSize,
         fontWeight: FontWeight.w600,
       ),

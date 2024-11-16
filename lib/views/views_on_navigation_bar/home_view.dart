@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:live_score_app/widgets/custom_appbar.dart';
+import 'package:live_score_app/widgets/custom_news_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -30,6 +31,10 @@ class HomeViewBody extends StatelessWidget {
           icon2: Icons.notifications_on_outlined,
           onPressed: () {},
         ),
+        const SizedBox(
+          height: 32,
+        ),
+        const CustomNewsCard(),
       ],
     );
   }
