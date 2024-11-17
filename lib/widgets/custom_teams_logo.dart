@@ -9,8 +9,8 @@ class TeamsLogo extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          width: 55,
-          height: 55,
+          width: 35,
+          height: 35,
           decoration: const BoxDecoration(
             color: Color(0xff222232),
             shape: BoxShape.circle,
@@ -18,18 +18,18 @@ class TeamsLogo extends StatelessWidget {
           child: Center(
             child: Image.asset(
               'asstes/images/flags/image (8).png',
-              width: 40,
-              height: 40,
+              width: 25,
+              height: 25,
               fit: BoxFit.contain,
             ),
           ),
         ),
         Positioned(
           top: 0.4,
-          right: -48,
+          right: -30,
           child: Container(
-            width: 55,
-            height: 55,
+            width: 35,
+            height: 35,
             decoration: const BoxDecoration(
               color: Color(0xff222232),
               shape: BoxShape.circle,
@@ -37,8 +37,8 @@ class TeamsLogo extends StatelessWidget {
             child: Center(
               child: Image.asset(
                 'asstes/images/flags/image (9).png',
-                width: 40,
-                height: 40,
+                width: 25,
+                height: 25,
                 fit: BoxFit.contain,
               ),
             ),

@@ -41,9 +41,6 @@ class HomeViewBody extends StatelessWidget {
           height: 24,
         ),
         const Expanded(child: FavoriteSportListView()),
-        const SizedBox(
-          height: 24,
-        ),
         const Expanded(child: CustomLiveMatchsScore()),
       ],
     );
