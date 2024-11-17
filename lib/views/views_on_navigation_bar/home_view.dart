@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:live_score_app/widgets/custom_appbar.dart';
 import 'package:live_score_app/widgets/custom_news_card.dart';
+import 'package:live_score_app/widgets/fav_sport_list_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -35,6 +36,10 @@ class HomeViewBody extends StatelessWidget {
           height: 32,
         ),
         const CustomNewsCard(),
+        const SizedBox(
+          height: 24,
+        ),
+        const Expanded(child: FavoriteSportListView()),
       ],
     );
   }

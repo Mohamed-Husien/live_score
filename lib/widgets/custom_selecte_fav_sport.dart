@@ -22,8 +22,8 @@ class CustomSelecteFavSport extends StatelessWidget {
           GestureDetector(
             onTap: onTap,
             child: Container(
-              height: 140,
-              width: 130,
+              height: 80,
+              width: 80,
               decoration: BoxDecoration(
                 color: color,
                 borderRadius: BorderRadius.circular(32),
@@ -31,8 +31,8 @@ class CustomSelecteFavSport extends StatelessWidget {
               child: Center(
                 child: Image.asset(
                   sportModel.image,
-                  width: 90,
-                  height: 90,
+                  width: 60,
+                  height: 60,
                   fit: BoxFit.contain,
                 ),
               ),
@@ -43,7 +43,7 @@ class CustomSelecteFavSport extends StatelessWidget {
           ),
           CustomSemiBoldText(
             text: sportModel.text,
-            fontSize: 20,
+            fontSize: 16,
           ),
         ],
       ),
