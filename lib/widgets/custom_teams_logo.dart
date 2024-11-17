@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TeamsLogo extends StatelessWidget {
-  const TeamsLogo({
-    super.key,
-  });
+  const TeamsLogo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +15,17 @@ class TeamsLogo extends StatelessWidget {
             color: Color(0xff222232),
             shape: BoxShape.circle,
           ),
-          child: Image.asset('asstes/images/flags/image (8).png'),
+          child: Center(
+            child: Image.asset(
+              'asstes/images/flags/image (8).png',
+              width: 40,
+              height: 40,
+              fit: BoxFit.contain,
+            ),
+          ),
         ),
         Positioned(
-          top: .4,
+          top: 0.4,
           right: -48,
           child: Container(
             width: 55,
@@ -28,6 +33,14 @@ class TeamsLogo extends StatelessWidget {
             decoration: const BoxDecoration(
               color: Color(0xff222232),
               shape: BoxShape.circle,
+            ),
+            child: Center(
+              child: Image.asset(
+                'asstes/images/flags/image (9).png',
+                width: 40,
+                height: 40,
+                fit: BoxFit.contain,
+              ),
             ),
           ),
         ),
