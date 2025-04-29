@@ -1,16 +1,36 @@
-# live_score_app
+# 🏆 Live Sports Score & News App
 
-A new Flutter project.
+![App Preview](asstes/images/liveScore.png)
 
-## Getting Started
+An engaging and seamless **live sports score and news app** that keeps users updated with:
+- ⚽ Real-time match results
+- 📰 Breaking sports news
+- 📊 In-depth game analysis
 
-This project is a starting point for a Flutter application.
+Designed to deliver an immersive experience for all sports enthusiasts.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📸 App Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🟢 OnBoarding Screen
+![OnBoarding](asstes/images/Screenshot_2025-03-08-14-22-12-41_46f84e5fbbe6c8ead358c877ee234937.jpg)
+
+### 🔐 Login & Register
+![Login & Register](asstes/images/Screenshot_2025-03-08-14-26-03-29_46f84e5fbbe6c8ead358c877ee234937.jpg)
+
+### 🏠 Home View
+![Home View](asstes/images/Screenshot_2025-03-08-14-22-52-78_46f84e5fbbe6c8ead358c877ee234937.jpg)
+
+---
+
+## 🚀 Tech Stack
+- Flutter
+- Firebase (Authentication & Firestore)
+- REST APIs for Live Scores & News
+
+---
+
+## 📬 Contact
+For any inquiries or feedback, feel free to reach out!
+
